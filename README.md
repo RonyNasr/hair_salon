@@ -4,7 +4,7 @@ Ruby project week-3 Epicodus. using Database, and Sinatra
 ## Getting Started
 
 to view the app please click on the below URL:
-(https://desolate-tundra-28235.herokuapp.com/)
+(https://enigmatic-retreat-63908.herokuapp.com/)
 
 ### Prerequisities
 
