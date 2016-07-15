@@ -1,13 +1,18 @@
 <h2>Stylists</h2>
 
-<% if@stylists.any?() %>
+
+<% if @stylists.any?() %>
+<ul>
   <% @stylists.each()do |stylist| %>
-    <a href="/stylists/<% stylist.id() %>"><% stylist.name() %></a>
+  <li><a href="/stylists/<%= stylist.id() %>"><%= stylist.name() %></a></li>
   <% end %>
+</ul>
 <% else %>
   You have no stylists yet
 <% end %>
 
 
-<a class="btn btn-default" href="/stylists/new">Add a Stylist</a>
-<a class="btn btn-default" href="/">View Clients</a>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/stylists/new">Add a Stylist</a>
+  <a class="btn btn-default" href="/">Back</a>
+</div>
