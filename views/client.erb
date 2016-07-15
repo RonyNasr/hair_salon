@@ -1,0 +1,18 @@
+<h2><%= @client.name() %></h2>
+
+<form action="/clients/<%= @client.id() %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name"></label>
+  <input type="text" name="name" placeholder="Client Name" required>
+  <button class="btn btn-primary" type="submit">Update</button>
+</form>
+
+<br>
+
+<div class="btn-row">
+<form class="form" action="/clients/<%= @client.id() %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn btn-danger" type="submit">Remove Client</button>
+  <a class="btn btn-default" href="/clients">Back</a>
+</form>
+</div>

@@ -7,13 +7,6 @@
   <button class="btn btn-primary" type="submit">Update</button>
 </form>
 
-<br>
-
-<form class="form" action="/stylists/<%= @stylist.id() %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button class="btn btn-primary" type="submit">Remove Stylist</button>
-</form>
-
 <h4>Clients:</h4>
 <% if @clients.any?() %>
   <% @clients.each() do |client| %>
@@ -23,7 +16,13 @@
   This stylist still has no clients.
 <% end %>
 
+<br>
+
 <div class="btn-row">
+<form class="form" action="/stylists/<%= @stylist.id() %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button class="btn btn-danger" type="submit">Remove Stylist</button>
   <a class="btn btn-primary" href="/stylists/<%= @stylist.id() %>/clients/new">Add a Client</a>
   <a class="btn btn-default" href="/stylists">Back</a>
+</form>
 </div>

@@ -3,10 +3,20 @@
 
 
 
-<form action="/stylist/<%= @stylist.id() %>/clients/new" method="post">
-  <input type="hidden" name="id" value="<%= @stylist.id() %>">
-  <label for="name"></label>
-  <input type="text" name="name" placeholder="Client Name" required>
+<form action="/stylists/<%= @stylist.id() %>/clients/new" method="post">
+    <input type="hidden" name="_method" value="patch">
+  <label for="client_id">Client Name:</label>
+  <select class="" name="client_id" required>
+    <option value="" selected>Select Client</option>
+    <% if @clients.any?() %>
+      <% @clients.each() do |client| %>
+        <option value="<%= client.id() %>"><%= client.name() %></option>
+      <% end%>
+    <% end %>
+
+  </select>
+
+
   <button type="submit" class="btn btn-primary btn-sm">Add Client</button>
 </form>
 

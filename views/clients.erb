@@ -1,1 +1,17 @@
 <h2>Clients</h2>
+
+<% if @clients.any?() %>
+
+  <% @clients.each()do |client| %>
+  <h5><a href="/clients/<%= client.id() %>"><%= client.name() %></a></h5>
+  <% end %>
+
+<% else %>
+  You have no clients yet
+<% end %>
+
+
+<div class="btn-row">
+  <a class="btn btn-primary" href="/clients/new">New Client</a>
+  <a class="btn btn-default" href="/">Back</a>
+</div>
