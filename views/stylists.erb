@@ -2,11 +2,11 @@
 
 
 <% if @stylists.any?() %>
-<ul>
+
   <% @stylists.each()do |stylist| %>
-  <li><a href="/stylists/<%= stylist.id() %>"><%= stylist.name() %></a></li>
+  <h5><a href="/stylists/<%= stylist.id() %>"><%= stylist.name() %></a></h5>
   <% end %>
-</ul>
+
 <% else %>
   You have no stylists yet
 <% end %>

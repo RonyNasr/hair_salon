@@ -4,7 +4,7 @@ describe (Client) do
 
   describe('#initialize') do
     it ('creates an instance of Client') do
-      client = Client.new({:name => "Johnny Bravo", :stylist_id => 1, :stylist_id => 1})
+      client = Client.new({:name => "Johnny Bravo", :stylist_id => 1})
 
       expect(client.name()).to(eq("Johnny Bravo"))
     end

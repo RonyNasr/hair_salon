@@ -1,26 +1,29 @@
 <h2><%= @stylist.name() %></h2>
 
-<form action="/stylists" method="post">
+<form action="/stylists/<%= @stylist.id() %>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label for="name"></label>
-  <input type="text" name="name" placeholder="Stylist Name">
-  <button type="submit">Update</button>
+  <input type="text" name="name" placeholder="Stylist Name" required>
+  <button class="btn btn-primary" type="submit">Update</button>
 </form>
-<form action="/stylists" method="post">
+
+<br>
+
+<form class="form" action="/stylists/<%= @stylist.id() %>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button type="submit">Remove Stylist</button>
+  <button class="btn btn-primary" type="submit">Remove Stylist</button>
 </form>
 
-
-<% if @clients.any?() %>
 <h4>Clients:</h4>
+<% if @clients.any?() %>
   <% @clients.each() do |client| %>
     <h6><a href="/clients/<%= client.id() %>"><%= client.name() %></a></h6>
+  <% end %>
 <% else %>
   This stylist still has no clients.
 <% end %>
 
 <div class="btn-row">
-  <a class="btn btn-primary" href="/stylists/:id/clients">Add a Client</a>
+  <a class="btn btn-primary" href="/stylists/<%= @stylist.id() %>/clients/new">Add a Client</a>
   <a class="btn btn-default" href="/stylists">Back</a>
 </div>
