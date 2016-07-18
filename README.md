@@ -1,11 +1,6 @@
 # Hair Salon
 Ruby project week-3 Epicodus. using Database, and Sinatra
 
-## Getting Started
-
-to view the app please click on the below URL:
-(https://enigmatic-retreat-63908.herokuapp.com/)
-
 ### Prerequisities
 
 * Ruby 2.2.0 and above
@@ -46,7 +41,6 @@ To run the tests you will need to follow the below steps:
 * Ruby
 * Sinatra
 * Atom
-* Heroku
 * Postgres
 
 ## Authors
