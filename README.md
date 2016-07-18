@@ -23,7 +23,7 @@ To install this project you will need to follow the below steps:
 _CREATE DATABASE hair_salon;
 CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
 CREATE TABLE clients (id serial PRIMARY KEY, name varchar, stylist_id int);
-CREATE DATABASE hair_salon_test;_
+CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;_
 
 * Clone or download the project to your desktop
 * Open Terminal
